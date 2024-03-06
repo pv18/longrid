@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/longrid/static/css/main.9c41e1f9.css",
-    "main.js": "/longrid/static/js/main.c4466911.js",
+    "main.css": "/longrid/static/css/main.f9536085.css",
+    "main.js": "/longrid/static/js/main.701bc88c.js",
     "static/media/scheme-small.svg": "/longrid/static/media/scheme-small.c485bcb46e7e51333d0dd8a006c37d73.svg",
     "static/media/leader.png": "/longrid/static/media/leader.c1704270323158905adf.png",
     "static/media/logo.svg": "/longrid/static/media/logo.70e4a67d4fd54ae4c3edcfccc365b447.svg",
@@ -66,18 +66,13 @@
     "index.html": "/longrid/index.html",
     "static/media/arrow-right.svg": "/longrid/static/media/arrow-right.4679d018305b1433143c53c691f8af0c.svg",
     "static/media/arrow-left.svg": "/longrid/static/media/arrow-left.31fa608db30bf806af4b7fac66215cc5.svg",
-    "static/media/arrow-top-left.svg": "/longrid/static/media/arrow-top-left.c32219bf5dac0364db405dbf40073772.svg",
-    "static/media/arrow-bottom-left.svg": "/longrid/static/media/arrow-bottom-left.370f098b101c1b6ea6f83b6c41cd6ab7.svg",
-    "static/media/arrow-top-right.svg": "/longrid/static/media/arrow-top-right.5ee9e5ee83ee2b4c341f2ac607fdc675.svg",
-    "static/media/arrow-bottom-right.svg": "/longrid/static/media/arrow-bottom-right.5f8dec6580d2a032df7755841fce0b9b.svg",
     "static/media/tick.svg": "/longrid/static/media/tick.13709381ff19f7282fdb.svg",
-    "static/media/arrow-top.svg": "/longrid/static/media/arrow-top.b6b1b0b2b5f7b85bd498f01972659476.svg",
     "static/media/arrow.svg": "/longrid/static/media/arrow.1a2a3fbf7bbc6e2ae89d31f8b858654a.svg",
-    "main.9c41e1f9.css.map": "/longrid/static/css/main.9c41e1f9.css.map",
-    "main.c4466911.js.map": "/longrid/static/js/main.c4466911.js.map"
+    "main.f9536085.css.map": "/longrid/static/css/main.f9536085.css.map",
+    "main.701bc88c.js.map": "/longrid/static/js/main.701bc88c.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c41e1f9.css",
-    "static/js/main.c4466911.js"
+    "static/css/main.f9536085.css",
+    "static/js/main.701bc88c.js"
   ]
 }
