@@ -137,66 +137,6 @@
           }
         }
 
-        .arrowBottomLeftIcon {
-          display: none;
-          position: absolute;
-          bottom: 50px;
-          left: -75px;
-          z-index: 1;
-
-          @include for-size(xl) {
-            display: none;
-          }
-        }
-
-        .arrowTopLeftIcon {
-          display: none;
-          position: absolute;
-          top: -15px;
-          left: -75px;
-          z-index: 1;
-
-          @include for-size(xl) {
-            display: none;
-          }
-        }
-
-        .arrowTopIcon {
-          display: none;
-          position: absolute;
-          top: -44px;
-          left: 170px;
-          z-index: 1;
-
-          @include for-size(xl) {
-            display: none;
-          }
-        }
-
-        .arrowTopRightIcon {
-          display: none;
-          position: absolute;
-          top: -15px;
-          right: -75px;
-          z-index: 1;
-
-          @include for-size(xl) {
-            display: none;
-          }
-        }
-
-        .arrowBottomRightIcon {
-          display: none;
-          position: absolute;
-          bottom: 50px;
-          right: -75px;
-          z-index: 1;
-
-          @include for-size(xl) {
-            display: none;
-          }
-        }
-
         .content {
           padding-bottom: 30px;
           display: flex;

@@ -4,7 +4,6 @@ import RepeatIcon from './assests/icons/repeat.svg';
 import UsersIcon from './assests/icons/users.svg';
 import StudioIcon from './assests/icons/studio.svg';
 import CameraIcon from './assests/icons/camera.svg';
-import ReactPlayer from 'react-player/lazy';
 import CardImg1 from './assests/img/card1.png';
 import CardImg2 from './assests/img/card2.png';
 import CardImg3 from './assests/img/card3.png';
@@ -126,14 +125,19 @@ export const ProductionLayout = () => {
             </div>
           </div>
 
-          <div className={s.videoResponsive}>
-            <iframe
-              width='auto'
-              height='auto'
-              src='https://facecast.net/w/rhke2w'
-              allowFullScreen
-              style={{ border: 'none' }}
-            />
+          <div className={s.cardVideo}>
+            <div className={s.videoResponsive}>
+              <iframe
+                width='auto'
+                height='auto'
+                src='https://facecast.net/w/rhke2w'
+                allowFullScreen
+                style={{ border: 'none' }}
+              />
+            </div>
+            <div className={s.cardTitle}>
+              Отчетное видео конгресса (более 3-х тысяч участников)
+            </div>
           </div>
         </div>
       </Container>

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Container, HeaderLayout } from 'components';
+import React, { useState } from 'react';
+import { Container, HeaderLayout, ModalVideo } from 'components';
 import LongridIcon from './assets/icons/longrid.svg';
 import EmailIcon from './assets/icons/email.svg';
 import VideoIcon from './assets/icons/video.svg';
@@ -12,49 +12,12 @@ import ArrowTopRightIcon from './assets/icons/arrow-top-right.svg';
 import ArrowTopIcon from './assets/icons/arrow-top.svg';
 import DisplayIcon from './assets/img/display.png';
 import LogoIcon from './assets/img/logo.png';
-import { Button, Modal } from 'antd';
-import { CloseOutlined, PlayCircleOutlined } from '@ant-design/icons';
+import { Button } from 'antd';
+import { PlayCircleOutlined } from '@ant-design/icons';
 import s from './ProjectsLayout.module.scss';
-import { useResize } from 'hooks';
 
 export const ProjectsLayout = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [maxModalSize, setMaxModalSize] = useState(1200);
-  const [height, setHeight] = useState(549);
-  const { isScreenXl, isScreenLg, isScreenMd, isScreenSm } = useResize();
-
-  useEffect(() => {
-    if (isScreenXl) {
-      setHeight(450);
-    }
-    if (isScreenLg) {
-      setHeight(350);
-    }
-    if (isScreenMd) {
-      setHeight(300);
-    }
-    if (isScreenSm) {
-      setHeight(250);
-    }
-  }, [isScreenXl, isScreenLg, isScreenMd, isScreenSm]);
-
-  const resize = () => {
-    const maxSize = Math.min(1200, window.innerWidth - 40);
-    setMaxModalSize(maxSize);
-  };
-
-  useEffect(() => {
-    window.addEventListener('resize', resize);
-    return () => window.removeEventListener('resize', resize);
-  });
-
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
 
   return (
     <section className={s.wrapper}>
@@ -93,31 +56,6 @@ export const ProjectsLayout = () => {
                 alt={'Display Icon'}
                 className={s.mainImg}
               />
-              <img
-                src={ArrowBottomLeftIcon}
-                alt={'Arrow Bottom Left Icon'}
-                className={s.arrowBottomLeftIcon}
-              />
-              <img
-                src={ArrowTopLeftIcon}
-                alt={'Arrow Top Left Icon'}
-                className={s.arrowTopLeftIcon}
-              />
-              <img
-                src={ArrowTopIcon}
-                alt={'Arrow Top Icon'}
-                className={s.arrowTopIcon}
-              />
-              <img
-                src={ArrowTopRightIcon}
-                alt={'Arrow Top Right Icon'}
-                className={s.arrowTopRightIcon}
-              />
-              <img
-                src={ArrowBottomRightIcon}
-                alt={'Arrow Bottom Right Icon'}
-                className={s.arrowBottomRightIcon}
-              />
               <div className={s.content}>
                 <div className={s.logo}>
                   <img
@@ -148,30 +86,16 @@ export const ProjectsLayout = () => {
             type={'primary'}
             icon={<PlayCircleOutlined />}
             size={'large'}
-            onClick={showModal}
+            onClick={() => setIsModalOpen(true)}
           >
             УЗНАТЬ БОЛЬШЕ
           </Button>
         </div>
-        <Modal
-          title={<div style={{ marginBottom: 30 }} />}
-          open={isModalOpen}
-          onCancel={handleCancel}
-          footer={false}
-          width={maxModalSize}
-          closeIcon={
-            <CloseOutlined style={{ fontSize: 30 }} onClick={handleCancel} />
-          }
-        >
-          <iframe
-            src={'https://facecast.net/w/mm6ik5'}
-            id='mm6ik5'
-            width={'100%'}
-            height={height}
-            allowFullScreen
-            style={{ border: 'none' }}
-          />
-        </Modal>
+        <ModalVideo
+          isModalOpen={isModalOpen}
+          handleModalOpen={setIsModalOpen}
+          urlVideo={'https://facecast.net/w/mm6ik5'}
+        />
       </Container>
     </section>
   );
