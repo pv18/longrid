@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/longrid/static/css/main.701cdf20.css",
-    "main.js": "/longrid/static/js/main.5040bf99.js",
+    "main.css": "/longrid/static/css/main.a6dbc281.css",
+    "main.js": "/longrid/static/js/main.bf23c5de.js",
     "static/media/scheme-small.svg": "/longrid/static/media/scheme-small.c485bcb46e7e51333d0dd8a006c37d73.svg",
     "static/media/leader.png": "/longrid/static/media/leader.c1704270323158905adf.png",
     "static/media/logo.svg": "/longrid/static/media/logo.70e4a67d4fd54ae4c3edcfccc365b447.svg",
@@ -33,7 +33,6 @@
     "static/media/therapist.svg": "/longrid/static/media/therapist.9fc1b93e12cbe444626bf9442f96ed74.svg",
     "static/media/bunner.jpg": "/longrid/static/media/bunner.b2d38422817c8fbea119.jpg",
     "static/media/logo-with-text.png": "/longrid/static/media/logo-with-text.7bc98324e63b264b897f.png",
-    "static/media/logo.png": "/longrid/static/media/logo.ba296a7abdafdf776a9d.png",
     "static/media/pediatrician.svg": "/longrid/static/media/pediatrician.45b6622a282a40f8d832689c4504a028.svg",
     "static/media/oncologist.svg": "/longrid/static/media/oncologist.a29e988377f5fc5fe42da46764896ae2.svg",
     "static/media/neurologist.svg": "/longrid/static/media/neurologist.9688e2ed37f64530ab41c9c863aec09a.svg",
@@ -74,11 +73,11 @@
     "static/media/tick.svg": "/longrid/static/media/tick.13709381ff19f7282fdb.svg",
     "static/media/arrow-top.svg": "/longrid/static/media/arrow-top.b6b1b0b2b5f7b85bd498f01972659476.svg",
     "static/media/arrow.svg": "/longrid/static/media/arrow.1a2a3fbf7bbc6e2ae89d31f8b858654a.svg",
-    "main.701cdf20.css.map": "/longrid/static/css/main.701cdf20.css.map",
-    "main.5040bf99.js.map": "/longrid/static/js/main.5040bf99.js.map"
+    "main.a6dbc281.css.map": "/longrid/static/css/main.a6dbc281.css.map",
+    "main.bf23c5de.js.map": "/longrid/static/js/main.bf23c5de.js.map"
   },
   "entrypoints": [
-    "static/css/main.701cdf20.css",
-    "static/js/main.5040bf99.js"
+    "static/css/main.a6dbc281.css",
+    "static/js/main.bf23c5de.js"
   ]
 }
