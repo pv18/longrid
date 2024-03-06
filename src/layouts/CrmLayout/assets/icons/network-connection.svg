@@ -1,0 +1,18 @@
+<svg width="48.000000" height="48.000000" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip364_2071">
+			<rect width="48.000000" height="48.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect width="48.000000" height="48.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip364_2071)">
+		<path d="M16.1611 21.3567L32.5869 13.1436" stroke="#EBBE7B" stroke-opacity="1.000000" stroke-width="2.500000" stroke-linejoin="round" stroke-linecap="round"/>
+		<path d="M32.5869 35.6057L16.1611 27.3926" stroke="#EBBE7B" stroke-opacity="1.000000" stroke-width="2.500000" stroke-linejoin="round" stroke-linecap="round"/>
+		<path d="M16.875 24.375C16.875 20.647 13.853 17.625 10.125 17.625C6.39697 17.625 3.375 20.647 3.375 24.375C3.375 28.1028 6.39697 31.125 10.125 31.125C13.853 31.125 16.875 28.1028 16.875 24.375Z" stroke="#EBBE7B" stroke-opacity="1.000000" stroke-width="2.500000" stroke-linejoin="round"/>
+		<path d="M45.375 10.125C45.375 6.39697 42.353 3.375 38.625 3.375C34.897 3.375 31.875 6.39697 31.875 10.125C31.875 13.853 34.897 16.875 38.625 16.875C42.353 16.875 45.375 13.853 45.375 10.125Z" stroke="#EBBE7B" stroke-opacity="1.000000" stroke-width="2.500000" stroke-linejoin="round"/>
+		<path d="M45.375 38.625C45.375 34.897 42.353 31.875 38.625 31.875C34.897 31.875 31.875 34.897 31.875 38.625C31.875 42.3528 34.897 45.375 38.625 45.375C42.353 45.375 45.375 42.3528 45.375 38.625Z" stroke="#EBBE7B" stroke-opacity="1.000000" stroke-width="2.500000" stroke-linejoin="round"/>
+	</g>
+</svg>

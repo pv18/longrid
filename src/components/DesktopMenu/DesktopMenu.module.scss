@@ -1,0 +1,18 @@
+@import './src/style/vars';
+
+.menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: $color-primary;
+  text-transform: uppercase;
+  border-bottom: none !important;
+
+  li {
+    border-radius: 6px !important;
+  }
+}

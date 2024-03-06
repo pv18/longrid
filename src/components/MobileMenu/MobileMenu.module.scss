@@ -1,0 +1,17 @@
+@import './src/style/vars';
+
+.wrapper {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+
+  button {
+    -webkit-tap-highlight-color: transparent;
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import './src/style/vars';
+
+.title {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.3;
+  color: $color-primary;
+
+  @include for-size(md) {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,42 @@
+@import './src/style/vars';
+
+.wrapper {
+  width: 100%;
+  padding: 0 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: $box-shadow-header;
+  transition: all 0.3s ease;
+
+  &Active {
+    background-color: $color-primary;
+    color: $color-white;
+    z-index: 9999;
+  }
+
+  @include for-size(lg) {
+    padding: 0 30px;
+  }
+
+  @include for-size(md) {
+    padding: 0 20px;
+  }
+
+  .header {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 50px;
+  }
+
+  .logo {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

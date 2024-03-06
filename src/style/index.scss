@@ -1,0 +1,11 @@
+@import 'vars';
+@import 'mixin';
+@import 'reset';
+
+html,
+body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
