@@ -1,10 +1,16 @@
 import React from 'react';
-import { Container, HeaderLayout } from 'components';
+import { Container, HeaderLayout, ImageWrapper } from 'components';
 import RepeatIcon from './assests/icons/repeat.svg';
 import UsersIcon from './assests/icons/users.svg';
 import StudioIcon from './assests/icons/studio.svg';
 import CameraIcon from './assests/icons/camera.svg';
 import ReactPlayer from 'react-player/lazy';
+import CardImg1 from './assests/img/card1.png';
+import CardImg2 from './assests/img/card2.png';
+import CardImg3 from './assests/img/card3.png';
+import CardImg4 from './assests/img/card4.png';
+import CardImg5 from './assests/img/card5.png';
+import CardImg6 from './assests/img/card6.png';
 import s from './ProductionLayout.module.scss';
 
 export const ProductionLayout = () => {
@@ -80,99 +86,54 @@ export const ProductionLayout = () => {
           <div className={s.cards}>
             <div className={s.cardRow}>
               <div className={s.card}>
-                <div className={s.card__video}>
-                  <ReactPlayer
-                    className={s.player}
-                    url='https://www.youtube.com/watch?v=GU_eBbhwrgo'
-                    width='100%'
-                    height='100%'
-                    controls={true}
-                  />
-                </div>
+                <ImageWrapper imageUrl={CardImg1} />
                 <div className={s.card__title}>Отчетное видео конгресса</div>
               </div>
               <div className={s.card}>
-                <div className={s.card__video}>
-                  <ReactPlayer
-                    className={s.player}
-                    url='https://www.youtube.com/watch?v=GU_eBbhwrgo'
-                    width='100%'
-                    height='100%'
-                    controls={true}
-                  />
+                <ImageWrapper imageUrl={CardImg2} />
+                <div className={s.card__title}>
+                  Отчетное видео проекта космецевтического бренда
                 </div>
-                <div className={s.card__title}>Отчетное видео конгресса</div>
               </div>
             </div>
 
             <div className={s.cardRow}>
               <div className={s.card}>
-                <div className={s.card__video}>
-                  <ReactPlayer
-                    className={s.player}
-                    url='https://www.youtube.com/watch?v=GU_eBbhwrgo'
-                    width='100%'
-                    height='100%'
-                    controls={true}
-                  />
+                <ImageWrapper imageUrl={CardImg3} />
+                <div className={s.card__title}>
+                  Анимационное видео с дикторской озвучкой
                 </div>
-                <div className={s.card__title}>Отчетное видео конгресса</div>
               </div>
               <div className={s.card}>
-                <div className={s.card__video}>
-                  <ReactPlayer
-                    className={s.player}
-                    url='https://www.youtube.com/watch?v=GU_eBbhwrgo'
-                    width='100%'
-                    height='100%'
-                    controls={true}
-                  />
-                </div>
-                <div className={s.card__title}>Отчетное видео конгресса</div>
+                <ImageWrapper imageUrl={CardImg4} />
+                <div className={s.card__title}>Лекция с моушн-дизайном</div>
               </div>
             </div>
 
             <div className={s.cardRow}>
               <div className={s.card}>
-                <div className={s.card__video}>
-                  <ReactPlayer
-                    className={s.player}
-                    url='https://www.youtube.com/watch?v=GU_eBbhwrgo'
-                    width='100%'
-                    height='100%'
-                    controls={true}
-                  />
+                <ImageWrapper imageUrl={CardImg5} />
+                <div className={s.card__title}>
+                  Лекция в классическом формате
                 </div>
-                <div className={s.card__title}>Отчетное видео конгресса</div>
               </div>
               <div className={s.card}>
-                <div className={s.card__video}>
-                  <ReactPlayer
-                    className={s.player}
-                    url='https://www.youtube.com/watch?v=GU_eBbhwrgo'
-                    width='100%'
-                    height='100%'
-                    controls={true}
-                  />
+                <ImageWrapper imageUrl={CardImg6} />
+                <div className={s.card__title}>
+                  Short-видео c моушн-дизайном
                 </div>
-                <div className={s.card__title}>Отчетное видео конгресса</div>
               </div>
             </div>
+          </div>
 
-            <div className={s.cardRow}>
-              <div className={s.card}>
-                <div className={s.card__video}>
-                  <ReactPlayer
-                    className={s.player}
-                    url='https://www.youtube.com/watch?v=GU_eBbhwrgo'
-                    width='100%'
-                    height='100%'
-                    controls={true}
-                  />
-                </div>
-                <div className={s.card__title}>Отчетное видео конгресса</div>
-              </div>
-            </div>
+          <div className={s.videoResponsive}>
+            <iframe
+              width='auto'
+              height='auto'
+              src='https://facecast.net/w/rhke2w'
+              allowFullScreen
+              style={{ border: 'none' }}
+            />
           </div>
         </div>
       </Container>

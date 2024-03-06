@@ -1,7 +1,7 @@
 import React from 'react';
-import Logo from './img/logo.png';
-import LogoText from './img/logo-text.png';
-import LogoFull from './img/logo-with-text.png';
+import Logo from './assets/img/logo.png';
+import LogoText from './assets/img/logo-text.png';
+import LogoFull from './assets/img/logo-with-text.png';
 import { Header } from 'components';
 import s from './MainLayout.module.scss';
 

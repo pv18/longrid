@@ -1,14 +1,53 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Container, HeaderLayout, Title } from 'components';
 import HandIcon from './assets/icons/hand.svg';
 import GearIcon from './assets/icons/gear.svg';
 import HandshakeIcon from './assets/icons/handshake.svg';
 import EcosystemImg from './assets/img/ecosystem.png';
-import { Button } from 'antd';
-import { PlayCircleOutlined } from '@ant-design/icons';
+import { Button, Modal } from 'antd';
+import { CloseOutlined, PlayCircleOutlined } from '@ant-design/icons';
+import { useResize } from 'hooks';
 import s from './EcosystemLayout.module.scss';
 
 export const EcosystemLayout = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [maxModalSize, setMaxModalSize] = useState(1200);
+  const [height, setHeight] = useState(549);
+  const { isScreenXl, isScreenLg, isScreenMd, isScreenSm } = useResize();
+
+  useEffect(() => {
+    if (isScreenXl) {
+      setHeight(450);
+    }
+    if (isScreenLg) {
+      setHeight(350);
+    }
+    if (isScreenMd) {
+      setHeight(300);
+    }
+    if (isScreenSm) {
+      setHeight(250);
+    }
+  }, [isScreenXl, isScreenLg, isScreenMd, isScreenSm]);
+
+  const resize = () => {
+    const maxSize = Math.min(1200, window.innerWidth - 40);
+    setMaxModalSize(maxSize);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', resize);
+    return () => window.removeEventListener('resize', resize);
+  });
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <section id={'ecosystem'} className={s.wrapper}>
       <Container>
@@ -86,10 +125,33 @@ export const EcosystemLayout = () => {
                 type={'primary'}
                 icon={<PlayCircleOutlined />}
                 size={'large'}
+                onClick={showModal}
               >
                 ПОСМОТРЕТЬ ВИДЕО
               </Button>
             </div>
+            <Modal
+              title={<div style={{ marginBottom: 30 }} />}
+              open={isModalOpen}
+              onCancel={handleCancel}
+              footer={false}
+              width={maxModalSize}
+              closeIcon={
+                <CloseOutlined
+                  style={{ fontSize: 30 }}
+                  onClick={handleCancel}
+                />
+              }
+            >
+              <iframe
+                src={'https://facecast.net/w/yxnrpk'}
+                id='yxnrpk'
+                width={'100%'}
+                height={height}
+                allowFullScreen
+                style={{ border: 'none' }}
+              />
+            </Modal>
           </div>
           <div className={s.imgWrapper}>
             <figure className={s.img}>

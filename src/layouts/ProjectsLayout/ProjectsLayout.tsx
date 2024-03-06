@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, HeaderLayout } from 'components';
 import LongridIcon from './assets/icons/longrid.svg';
 import EmailIcon from './assets/icons/email.svg';
@@ -12,11 +12,50 @@ import ArrowTopRightIcon from './assets/icons/arrow-top-right.svg';
 import ArrowTopIcon from './assets/icons/arrow-top.svg';
 import DisplayIcon from './assets/img/display.png';
 import LogoIcon from './assets/img/logo.png';
-import { Button } from 'antd';
-import { PlayCircleOutlined } from '@ant-design/icons';
+import { Button, Modal } from 'antd';
+import { CloseOutlined, PlayCircleOutlined } from '@ant-design/icons';
 import s from './ProjectsLayout.module.scss';
+import { useResize } from 'hooks';
 
 export const ProjectsLayout = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [maxModalSize, setMaxModalSize] = useState(1200);
+  const [height, setHeight] = useState(549);
+  const { isScreenXl, isScreenLg, isScreenMd, isScreenSm } = useResize();
+
+  useEffect(() => {
+    if (isScreenXl) {
+      setHeight(450);
+    }
+    if (isScreenLg) {
+      setHeight(350);
+    }
+    if (isScreenMd) {
+      setHeight(300);
+    }
+    if (isScreenSm) {
+      setHeight(250);
+    }
+  }, [isScreenXl, isScreenLg, isScreenMd, isScreenSm]);
+
+  const resize = () => {
+    const maxSize = Math.min(1200, window.innerWidth - 40);
+    setMaxModalSize(maxSize);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', resize);
+    return () => window.removeEventListener('resize', resize);
+  });
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <section className={s.wrapper}>
       <Container>
@@ -105,10 +144,34 @@ export const ProjectsLayout = () => {
           </div>
         </div>
         <div className={s.button}>
-          <Button type={'primary'} icon={<PlayCircleOutlined />} size={'large'}>
+          <Button
+            type={'primary'}
+            icon={<PlayCircleOutlined />}
+            size={'large'}
+            onClick={showModal}
+          >
             УЗНАТЬ БОЛЬШЕ
           </Button>
         </div>
+        <Modal
+          title={<div style={{ marginBottom: 30 }} />}
+          open={isModalOpen}
+          onCancel={handleCancel}
+          footer={false}
+          width={maxModalSize}
+          closeIcon={
+            <CloseOutlined style={{ fontSize: 30 }} onClick={handleCancel} />
+          }
+        >
+          <iframe
+            src={'https://facecast.net/w/mm6ik5'}
+            id='mm6ik5'
+            width={'100%'}
+            height={height}
+            allowFullScreen
+            style={{ border: 'none' }}
+          />
+        </Modal>
       </Container>
     </section>
   );

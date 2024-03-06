@@ -141,16 +141,19 @@
     }
 
     .cards {
+      margin-bottom: 40px;
       display: flex;
       flex-direction: column;
       row-gap: 40px;
 
       @include for-size(lg) {
         row-gap: 20px;
+        margin-bottom: 30px;
       }
 
       @include for-size(sm) {
         row-gap: 10px;
+        margin-bottom: 20px;
       }
 
       .cardRow {
@@ -209,6 +212,25 @@
             }
           }
         }
+      }
+    }
+
+    .videoResponsive {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+
+      & iframe,
+      & object,
+      & embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
       }
     }
   }
