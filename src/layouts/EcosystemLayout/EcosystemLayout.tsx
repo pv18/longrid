@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, HeaderLayout, ModalVideo, Title } from 'components';
+import { Container, HeaderLayout, Title, VideoModal } from 'components';
 import HandIcon from './assets/icons/hand.svg';
 import GearIcon from './assets/icons/gear.svg';
 import HandshakeIcon from './assets/icons/handshake.svg';
@@ -93,10 +93,10 @@ export const EcosystemLayout = () => {
                 ПОСМОТРЕТЬ ВИДЕО
               </Button>
             </div>
-            <ModalVideo
-              isModalOpen={isModalOpen}
-              handleModalOpen={setIsModalOpen}
-              urlVideo={'https://facecast.net/w/yxnrpk'}
+            <VideoModal
+              isOpen={isModalOpen}
+              setIsOpen={setIsModalOpen}
+              url={'https://facecast.net/w/yxnrpk'}
             />
           </div>
           <div className={s.imgWrapper}>

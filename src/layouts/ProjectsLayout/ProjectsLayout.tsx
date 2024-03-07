@@ -1,15 +1,10 @@
 import React, { useState } from 'react';
-import { Container, HeaderLayout, ModalVideo } from 'components';
+import { Container, HeaderLayout, VideoModal } from 'components';
 import LongridIcon from './assets/icons/longrid.svg';
 import EmailIcon from './assets/icons/email.svg';
 import VideoIcon from './assets/icons/video.svg';
 import EventsIcon from './assets/icons/events.svg';
 import MessageIcon from './assets/icons/message.svg';
-import ArrowBottomLeftIcon from './assets/icons/arrow-bottom-left.svg';
-import ArrowBottomRightIcon from './assets/icons/arrow-bottom-right.svg';
-import ArrowTopLeftIcon from './assets/icons/arrow-top-left.svg';
-import ArrowTopRightIcon from './assets/icons/arrow-top-right.svg';
-import ArrowTopIcon from './assets/icons/arrow-top.svg';
 import DisplayIcon from './assets/img/display.png';
 import LogoIcon from './assets/img/logo.png';
 import { Button } from 'antd';
@@ -91,10 +86,10 @@ export const ProjectsLayout = () => {
             УЗНАТЬ БОЛЬШЕ
           </Button>
         </div>
-        <ModalVideo
-          isModalOpen={isModalOpen}
-          handleModalOpen={setIsModalOpen}
-          urlVideo={'https://facecast.net/w/mm6ik5'}
+        <VideoModal
+          isOpen={isModalOpen}
+          setIsOpen={setIsModalOpen}
+          url={'https://facecast.net/w/mm6ik5'}
         />
       </Container>
     </section>

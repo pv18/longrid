@@ -1,8 +1,7 @@
-import React, {FC, useEffect, useRef, useState} from 'react';
+import React, { FC, useEffect, useRef, useState } from 'react';
 import { Modal } from 'antd';
 import { CloseOutlined } from '@ant-design/icons';
 import { useResize } from 'hooks';
-import s from './ModalVideo.module.scss';
 
 interface ModalVideoProps {
   isModalOpen: boolean;
@@ -10,7 +9,7 @@ interface ModalVideoProps {
   urlVideo: string;
 }
 
-export const ModalVideo: FC<ModalVideoProps> = (props) => {
+export const ModalVideoComponent: FC<ModalVideoProps> = (props) => {
   const { isModalOpen, handleModalOpen, urlVideo } = props;
   const [maxModalSize, setMaxModalSize] = useState(1200);
   const [height, setHeight] = useState(549);
@@ -20,14 +19,20 @@ export const ModalVideo: FC<ModalVideoProps> = (props) => {
   const playVideo = () => {
     if (iframeRef.current) {
       const player = iframeRef.current.contentWindow as Window;
-      player.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+      player.postMessage(
+        '{"event":"command","func":"playVideo","args":""}',
+        '*'
+      );
     }
   };
 
   const pauseVideo = () => {
     if (iframeRef.current) {
       const player = iframeRef.current.contentWindow as Window;
-      player.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+      player.postMessage(
+        '{"event":"command","func":"pauseVideo","args":""}',
+        '*'
+      );
     }
   };
 
@@ -59,7 +64,7 @@ export const ModalVideo: FC<ModalVideoProps> = (props) => {
   }, [isScreenXl, isScreenLg, isScreenMd, isScreenSm]);
 
   const handleCancel = () => {
-    pauseVideo()
+    pauseVideo();
     handleModalOpen(false);
   };
 
@@ -74,21 +79,22 @@ export const ModalVideo: FC<ModalVideoProps> = (props) => {
         <CloseOutlined style={{ fontSize: 30 }} onClick={handleCancel} />
       }
     >
-      <>
+      <div>
         <iframe
-            ref={iframeRef}
-            src={`${urlVideo}?enablejsapi=1`}
-            width={'100%'}
-            height={height}
-            allowFullScreen
-            allow="autoplay; fullscreen"
-            style={{ border: 'none' }}
+          ref={iframeRef}
+          src={urlVideo}
+          width={'100%'}
+          height={height}
+          allowFullScreen
+          // allow="autoplay; fullscreen"
+          allow='fullscreen'
+          style={{ border: 'none' }}
         />
         <div>
           <button onClick={playVideo}>Play</button>
           <button onClick={pauseVideo}>Pause</button>
         </div>
-      </>
+      </div>
     </Modal>
   );
 };
