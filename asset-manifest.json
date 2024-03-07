@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/longrid/static/css/main.f9536085.css",
-    "main.js": "/longrid/static/js/main.701bc88c.js",
+    "main.js": "/longrid/static/js/main.0b065a5e.js",
     "static/media/scheme-small.svg": "/longrid/static/media/scheme-small.c485bcb46e7e51333d0dd8a006c37d73.svg",
     "static/media/leader.png": "/longrid/static/media/leader.c1704270323158905adf.png",
     "static/media/logo.svg": "/longrid/static/media/logo.70e4a67d4fd54ae4c3edcfccc365b447.svg",
@@ -60,19 +60,19 @@
     "static/media/video-visit.svg": "/longrid/static/media/video-visit.492c204683ff43f148b16886e5d1fda8.svg",
     "static/media/network-connection.svg": "/longrid/static/media/network-connection.bf89f6cbfb63f6df94b2fe177acb63c4.svg",
     "static/media/laptop.svg": "/longrid/static/media/laptop.3fac49f324a44065ea210b474a71075a.svg",
+    "index.html": "/longrid/index.html",
     "static/media/email.svg": "/longrid/static/media/email.5664873b7e87355193e9f1c364c2a542.svg",
     "static/media/camera.svg": "/longrid/static/media/camera.2084680da5980bfa57e0d07761858d84.svg",
     "static/media/longrid.svg": "/longrid/static/media/longrid.b3378cfe35418b74b92e8f71f131a8dc.svg",
-    "index.html": "/longrid/index.html",
     "static/media/arrow-right.svg": "/longrid/static/media/arrow-right.4679d018305b1433143c53c691f8af0c.svg",
     "static/media/arrow-left.svg": "/longrid/static/media/arrow-left.31fa608db30bf806af4b7fac66215cc5.svg",
     "static/media/tick.svg": "/longrid/static/media/tick.13709381ff19f7282fdb.svg",
     "static/media/arrow.svg": "/longrid/static/media/arrow.1a2a3fbf7bbc6e2ae89d31f8b858654a.svg",
     "main.f9536085.css.map": "/longrid/static/css/main.f9536085.css.map",
-    "main.701bc88c.js.map": "/longrid/static/js/main.701bc88c.js.map"
+    "main.0b065a5e.js.map": "/longrid/static/js/main.0b065a5e.js.map"
   },
   "entrypoints": [
     "static/css/main.f9536085.css",
-    "static/js/main.701bc88c.js"
+    "static/js/main.0b065a5e.js"
   ]
 }
