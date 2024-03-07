@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, {FC, useEffect, useRef, useState} from 'react';
 import { Modal } from 'antd';
 import { CloseOutlined } from '@ant-design/icons';
 import { useResize } from 'hooks';
@@ -15,6 +15,21 @@ export const ModalVideo: FC<ModalVideoProps> = (props) => {
   const [maxModalSize, setMaxModalSize] = useState(1200);
   const [height, setHeight] = useState(549);
   const { isScreenXl, isScreenLg, isScreenMd, isScreenSm } = useResize();
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  const playVideo = () => {
+    if (iframeRef.current) {
+      const player = iframeRef.current.contentWindow as Window;
+      player.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    }
+  };
+
+  const pauseVideo = () => {
+    if (iframeRef.current) {
+      const player = iframeRef.current.contentWindow as Window;
+      player.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+    }
+  };
 
   // Адаптивный подбор ширины модального окна и видео
   useEffect(() => {
@@ -44,6 +59,7 @@ export const ModalVideo: FC<ModalVideoProps> = (props) => {
   }, [isScreenXl, isScreenLg, isScreenMd, isScreenSm]);
 
   const handleCancel = () => {
+    pauseVideo()
     handleModalOpen(false);
   };
 
@@ -58,13 +74,21 @@ export const ModalVideo: FC<ModalVideoProps> = (props) => {
         <CloseOutlined style={{ fontSize: 30 }} onClick={handleCancel} />
       }
     >
-      <iframe
-        src={urlVideo}
-        width={'100%'}
-        height={height}
-        allowFullScreen
-        style={{ border: 'none' }}
-      />
+      <>
+        <iframe
+            ref={iframeRef}
+            src={`${urlVideo}?enablejsapi=1`}
+            width={'100%'}
+            height={height}
+            allowFullScreen
+            allow="autoplay; fullscreen"
+            style={{ border: 'none' }}
+        />
+        <div>
+          <button onClick={playVideo}>Play</button>
+          <button onClick={pauseVideo}>Pause</button>
+        </div>
+      </>
     </Modal>
   );
 };
