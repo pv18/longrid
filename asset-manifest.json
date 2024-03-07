@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/longrid/static/css/main.f78dc103.css",
-    "main.js": "/longrid/static/js/main.227732a6.js",
+    "main.js": "/longrid/static/js/main.7ef123ff.js",
     "static/media/scheme-small.svg": "/longrid/static/media/scheme-small.c485bcb46e7e51333d0dd8a006c37d73.svg",
     "static/media/leader.png": "/longrid/static/media/leader.c1704270323158905adf.png",
     "static/media/logo.svg": "/longrid/static/media/logo.70e4a67d4fd54ae4c3edcfccc365b447.svg",
@@ -69,10 +69,10 @@
     "static/media/tick.svg": "/longrid/static/media/tick.13709381ff19f7282fdb.svg",
     "static/media/arrow.svg": "/longrid/static/media/arrow.1a2a3fbf7bbc6e2ae89d31f8b858654a.svg",
     "main.f78dc103.css.map": "/longrid/static/css/main.f78dc103.css.map",
-    "main.227732a6.js.map": "/longrid/static/js/main.227732a6.js.map"
+    "main.7ef123ff.js.map": "/longrid/static/js/main.7ef123ff.js.map"
   },
   "entrypoints": [
     "static/css/main.f78dc103.css",
-    "static/js/main.227732a6.js"
+    "static/js/main.7ef123ff.js"
   ]
 }
