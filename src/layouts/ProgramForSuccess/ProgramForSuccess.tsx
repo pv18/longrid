@@ -14,7 +14,7 @@ export const ProgramForSuccess = () => {
         <HeaderLayout
           className={s.header}
           title={'экосистема для успеха наших партнеров'}
-          maxWidthTitle={500}
+          maxWidthTitle={600}
           subtitle={'MedGuru – полноценная двусторонняя коммуникация'}
           maxWidthSubTitle={610}
         />

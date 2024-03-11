@@ -2,7 +2,6 @@
   "name": "longrid",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://pv18.github.io/longrid",
   "dependencies": {
     "@ant-design/icons": "^5.3.1",
     "@types/node": "^16.7.13",
@@ -11,7 +10,6 @@
     "@types/react-modal-video": "^1.2.3",
     "antd": "^5.14.2",
     "classnames": "^2.5.1",
-    "gh-pages": "^6.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-modal-video": "^2.0.1",
@@ -22,9 +20,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "prettier-fix": "yarn prettier --write .",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "prettier-fix": "yarn prettier --write ."
   },
   "eslintConfig": {
     "extends": [

@@ -28,15 +28,28 @@
     tr {
       &:nth-child(even) {
         background-color: $color-lavender;
-      }
 
-      &:hover {
-        background-color: $color-lavender !important;
+        &:hover {
+          background-color: $color-lavender;
 
-        td {
-          background-color: $color-lavender !important;
+          td {
+            background-color: $color-lavender !important;
+          }
         }
       }
+
+      &:nth-child(odd) {
+        background-color: $color-white;
+
+        &:hover {
+          background-color: $color-white;
+
+          td {
+            background-color: $color-white !important;
+          }
+        }
+      }
+
     }
   }
 

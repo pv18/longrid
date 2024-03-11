@@ -97,6 +97,7 @@ export const ChooseUsLayout = () => {
           className={s.header}
           hideDivider={true}
           title={'Наши омниканальные проекты приносят партнерам:'}
+          maxWidthTitle={910}
         />
         <div className={s.cards}>
           <div className={s.card}>

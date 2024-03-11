@@ -20,7 +20,7 @@ export const ProjectsLayout = () => {
         <HeaderLayout
           className={s.header}
           title={'Омниканальные маркетинговые проекты'}
-          maxWidthTitle={500}
+          maxWidthTitle={540}
           subtitle={
             'Medtouch — технологический и маркетинговый ПРОВОДНИК для фармы среди всех образовательных порталов'
           }
