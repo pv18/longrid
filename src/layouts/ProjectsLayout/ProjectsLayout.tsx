@@ -15,7 +15,7 @@ export const ProjectsLayout = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className={s.wrapper}>
+    <section id={'projects'} className={s.wrapper}>
       <Container>
         <HeaderLayout
           className={s.header}

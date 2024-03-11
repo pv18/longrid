@@ -6,11 +6,12 @@ import s from './MobileMenu.module.scss';
 
 const menuStyle: CSSProperties = {
   padding: 0,
-  fontSize: 24,
+  fontSize: 14,
   fontWeight: 600,
   lineHeight: 1.4,
   color: 'blue',
   textTransform: 'uppercase',
+  textAlign:'center'
 };
 
 const drawerTitleStyle: CSSProperties = {

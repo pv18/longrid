@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Menu, MenuProps } from 'antd';
-import { itemsMenu } from 'constans';
-import { useScroll } from 'hooks';
+import React from 'react';
+import {Menu, MenuProps} from 'antd';
+import {itemsMenu} from 'constans';
+import {useScroll} from 'hooks';
 import s from './DesktopMenu.module.scss';
 
 export const DesktopMenu = () => {

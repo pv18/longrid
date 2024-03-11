@@ -6,12 +6,12 @@ import LogoWhiteIcon from './icons/logo-white.svg';
 import s from './Header.module.scss';
 
 export const Header = () => {
-  const { isScreenXl } = useResize();
+  const { isScreenXxx } = useResize();
   const { scrolled } = useScroll();
 
   return (
     <>
-      {isScreenXl ? (
+      {isScreenXxx ? (
         <MobileMenu />
       ) : (
         <header className={`${s.wrapper} ${scrolled ? s.wrapperActive : ''}`}>

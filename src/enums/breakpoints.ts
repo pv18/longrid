@@ -4,4 +4,5 @@ export enum Breakpoints {
   SCREEN_LG = 992,
   SCREEN_XL = 1200,
   SCREEN_XXL = 1400,
+  SCREEN_XXX = 1600,
 }
